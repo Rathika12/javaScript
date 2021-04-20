@@ -1,0 +1,48 @@
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+<center>
+<h1>LOGIN PAGE</h1>
+<form action="view.html">
+<!-- <label for="mobile number">Enter Mobile Number</label> -->
+<input type="number" name="mobile number" placeholder = "Enter Mobile number" id="mobile" onchange="mobileValidate()" required autofocus>
+<br  />
+<br   />
+<!-- <label for="password">Enter your Password</label>  -->
+<input type="password" name="password" placeholder="Password" id="password" onchange="passwordValidate()" required>
+<br />
+<br />
+<button type="submit" onclick="login()">SUBMIT</button>
+</form>
+<script>
+function mobileValidate(){
+    let mobileNumber = document.querySelector("#mobile").value;
+    //alert("Mobile Number: "+mobileNumber);
+    if(mobileNumber.length==10){
+      //alert("Correct Mobile Number");
+    } 
+    else{
+      alert("Incorrect Mobile Number");
+    }
+}
+function passwordValidate(){
+    let pass = document.querySelector("#password").value;
+    if(pass.length>6){
+        
+    }
+    else{
+        alert("Password should have minimum 6 characters");
+    }
+}
+function login(){
+    event.preventDefault();
+    alert("Wellcome");
+}
+</script>
+</center>
+</body>
+</html>
